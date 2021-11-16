@@ -114,11 +114,11 @@ window.onclick = () => {
         camera.position.z = camera.position.z - 0.02; // 0.9999999999999973
         document.getElementById("canvas").classList.add("animate-fade-out");
         document.getElementById("title").classList.add("animate-fade-out");
-        setTimeout(() => {
-          window.location.href = "./about";
-        }, 3000);
       } else {
-        clearInterval(zoomIn);
+        setTimeout(() => {
+          location.href = '/about.html'
+          clearInterval(zoomIn)
+        }, 2000);
       }
     }, 10);
   }
