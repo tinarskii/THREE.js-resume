@@ -115,14 +115,14 @@ window.onclick = () => {
         document.getElementById("canvas").classList.add("animate-fade-out");
         document.getElementById("title").classList.add("animate-fade-out");
         setTimeout(() => {
-          window.location.href = "./about"
+          window.location.href = "./about";
         }, 3000);
       } else {
         clearInterval(zoomIn);
       }
     }, 10);
   }
-}
+};
 
 setTimeout(() => {
   document.getElementById("title").classList.remove("hidden");
