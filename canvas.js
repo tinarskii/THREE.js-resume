@@ -1,8 +1,8 @@
 // Texture
-var EarthTexture = new THREE.TextureLoader().load("./public/earth.jpg");
-var EarthNormalMap = new THREE.TextureLoader().load("./public/normal.tif");
-var MoonTexture = new THREE.TextureLoader().load("./public/moon.jpg");
-var SunTexture = new THREE.TextureLoader().load("./public/sun.jpg");
+const EarthTexture = new THREE.TextureLoader().load("./public/earth.jpg");
+const EarthNormalMap = new THREE.TextureLoader().load("./public/normal.tif");
+const MoonTexture = new THREE.TextureLoader().load("./public/moon.jpg");
+const SunTexture = new THREE.TextureLoader().load("./public/sun.jpg");
 
 // Set background image
 const bgImg = new THREE.TextureLoader().load("./public/bg.jpg", (texture) => {
