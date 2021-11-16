@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tinnaphat's Interactive Resume</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        margin: 0;
+      }
+      html {
+        overflow-y: scroll;
+        background-color: black;
+      }
+      ::-webkit-scrollbar {
+        width: 0px;
+      }
+      canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      .animate-fade {
+        animation: fadeIn 1s;
+      }
+      .animate-fade-out {
+        animation: fadeOut 3s forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      .glow {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #858585,
+          0 0 40px #858585, 0 0 50px #858585, 0 0 60px #858585, 0 0 70px #858585;
+      }
+      canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      ::selection {
+        background-color: transparent;
+        color: currentColor;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <main class="w-screen absolute z-50 grid h-screen place-items-center">
+      <div class="wrapper">
+        <div id="loading" class="animate-pulse text-white font-bold text-6xl">
+          🌎LOADING... 🚀
+        </div>
+        <div id="title" class="hidden">
+          <p class="glow text-6xl font-serif text-white animate-pulse">
+            TINNAPHAT SOMSANG
+          </p>
+          <p class="glow font-serif animate-pulse text-white">Click anywhere to enter...</p>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://threejs.org/build/three.js"></script>
+  <script src="./canvas.js" type="module"></script>
+</html>
