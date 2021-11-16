@@ -116,7 +116,7 @@ window.onclick = () => {
         document.getElementById("title").classList.add("animate-fade-out");
       } else {
         setTimeout(() => {
-          location.href = '/about.html'
+          location.href = '/THREE.js-resume/about'
           clearInterval(zoomIn)
         }, 2000);
       }
